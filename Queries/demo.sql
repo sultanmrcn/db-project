@@ -17,4 +17,4 @@ select STREET_ADDRESS,POSTAL_CODE from LOCATIONS;
 --display street_address, postal code from locations table.
 
 SELECT  distinct FIRST_NAME FROM EMPLOYEES;
---romes duplicates
+--removes duplicates
