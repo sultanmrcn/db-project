@@ -20,7 +20,7 @@ SELECT  distinct FIRST_NAME FROM EMPLOYEES;
 --removes duplicates
 
 SELECT FIRST_NAME,LAST_NAME,PHONE_NUMBER FROM EMPLOYEES
-WHERE FIRST_NAME = 'David'  ;
+WHERE FIRST_NAME = 'David';
 --I want to see first_name, last_name and Phone number of david(s)
 
 SELECT FIRST_NAME,LAST_NAME,PHONE_NUMBER FROM EMPLOYEES
@@ -74,6 +74,44 @@ select * from EMPLOYEES WHERE  FIRST_NAME LIKE 'C%';
 --get me all employees whose first name starts with C
 
 select * from EMPLOYEES WHERE  FIRST_NAME LIKE '_u%';
+--get me the first name where second char is "u"
+
+select min (SALARY) from EMPLOYEES;
+--find me minimum salary
+
+SELECT MAX(SALARY) FROM EMPLOYEES;
+--find me maximum salary
+
+SELECT AVG(SALARY) FROM EMPLOYEES;
+--find me avg salary
+
+SELECT round (AVG(SALARY),2) FROM EMPLOYEES;
+-- round numbers.
+
+select  sum (SALARY) from EMPLOYEES;
+--Sum Salary of all employees
+
+select AVG(SALARY)  FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG';
+--get me the salary for IT_Programmer.
+
+SELECT DISTINCT JOB_ID FROM JOBS;
+--get me unique job_ids
+
+
+SELECT  JOB_ID,COUNT (*) FROM EMPLOYEES GROUP BY JOB_ID;
+-- HOW MANY EMPLOYEES WORKING FOR EACH JOB ID
+
+SELECT JOB_ID, AVG(SALARY ) FROM EMPLOYEES GROUP BY JOB_ID;
+--get avg salary for each job ids.
+
+select JOB_ID,AVG(SALARY),count(*) , sum(SALARY) from EMPLOYEES
+group by JOB_ID having avg (SALARY)> 5000;
+--get me job_ids where their avg salary is more than 5 k
+
+
+
+
+
 
 
 
