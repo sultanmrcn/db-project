@@ -108,6 +108,8 @@ select JOB_ID,AVG(SALARY),count(*) , sum(SALARY) from EMPLOYEES
 group by JOB_ID having avg (SALARY)> 5000;
 --get me job_ids where their avg salary is more than 5 k
 
+---day 1 finished
+
 
 
 
